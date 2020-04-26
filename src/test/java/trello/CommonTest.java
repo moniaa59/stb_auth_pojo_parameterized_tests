@@ -3,6 +3,7 @@ package trello;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
@@ -15,6 +16,7 @@ public class CommonTest {
     protected static RequestSpecBuilder reqBuilder;
     protected static RequestSpecification reqSpec;
 
+    @BeforeAll
     public static void beforeAll(){
         reqBuilder = new RequestSpecBuilder();
         reqBuilder.addQueryParam("key", KEY);
